@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persistence>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="{http://java.sun.com/xml/ns/persistence} {http://java.sun.com/xml/ns/persistence_2_0.xsd}"
+  version="2.0">
+  
+  <!-- This file define the persistence unit required by JPA -->
+
+  <persistence-unit name="persistUnit">
+  </persistence-unit>
+
+</persistence>

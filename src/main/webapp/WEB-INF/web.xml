@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+
+
+	<servlet>
+		<servlet-name>SpringHibernate1Servlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/config/servletConfig.xml</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SpringHibernate1Servlet</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<!-- In a maven project any file created under src/main/resources folder, 
+			will be automatically added by Maven to the classpath. Hence below "classpath:/jpaContext.xml" 
+		-->
+		<param-value>classpath:/jpaContext.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<display-name>SpringHibernate1</display-name>
+
+
+
+</web-app>
